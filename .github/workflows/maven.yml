@@ -25,6 +25,6 @@ jobs:
     - name: Build with Maven
       run: mvn test-compile -pl hadoop-tools/hadoop-distcp -am
     - name: run test without NonDex
-      run: mvn -pl test-compile test -Dtest=org.apache.hadoop.tools.TestDistCpSystem#testRecursiveChunkCopy
+      run: mvn -pl hadoop-tools/hadoop-distcp test -Dtest=org.apache.hadoop.tools.TestDistCpSystem#testRecursiveChunkCopy
     - name: run test with NonDex
-      run: mvn -pl test-compile edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.tools.TestDistCpSystem#testRecursiveChunkCopy
+      run: mvn -pl hadoop-tools/hadoop-distcp edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.tools.TestDistCpSystem#testRecursiveChunkCopy
